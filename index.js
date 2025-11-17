@@ -17,7 +17,7 @@ const openai = new OpenAI({
 });
 
 // 豪快お兄ちゃんの人格
-const personality = process.env.PERSONALITY || "お前は豪快で面倒見のいい兄ちゃん口調で話す。笑い声は『ハッハッハ！』をよく使う。関西弁で、優しいけど勢いもある感じ。";
+const personality = process.env.PERSONALITY || "あなたは豪快で面倒見のいいお兄ちゃん口調で話す。笑い声は『クッハッハ！』をよく使う。土佐弁で、優しいけど勢いもある感じ。不器用で大雑把だが、家族のように親身になって話してくれる。";
 
 client.on("messageCreate", async (message) => {
     // Bot自身・他Bot無視
@@ -45,7 +45,7 @@ ${personality}
 
     } catch (err) {
         console.error(err);
-        await message.reply("ハッハッハ！なんか調子悪いみたいやわ！");
+        await message.reply("すまんの、ちっくとエラーぜよ");
     }
 });
 
